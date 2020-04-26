@@ -31,7 +31,7 @@ app.get("",(req,res) => {
 
 app.get("/about",(req,res) => {
     res.render("about",{
-        title: "About Us",
+        title: "About App",
         headerContent: "About Page"
     })
 })
@@ -64,8 +64,9 @@ app.get("/weather",(req,res) => {
                         temperature: data.Temperature,
                         chance_of_rain: data.Precipitation,
                         humidity_percentage: data.Humidity,
-                        icon: data.Icon
+                        icon: data.Icon,
                     })
+
                     
                   })
             }
@@ -84,7 +85,7 @@ app.get("/help/*",(req,res) => {
 
 app.get("*",(req,res) => {
     res.render("404",{
-        headerContent: "Error 404: Page not found"
+        headerContent: "Page Not Found"
     })
 })
 

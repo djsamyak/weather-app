@@ -17,7 +17,7 @@ function forecast(longitude, latittude, callback)
                 Description: response.body.current.weather_descriptions,
                 Precipitation: response.body.current.precip,
                 Humidity: response.body.current.humidity,
-                Icon: response.body.current.weather_icons   
+                Icon: response.body.current.weather_icons
             })
         }
     })
