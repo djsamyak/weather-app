@@ -12,7 +12,7 @@ const humidity1 = document.getElementById("humidity")
 const closeButton1 = document.getElementById("closeButton")  
 
 function findLocation(x){
-    fetch(`http://localhost:3000/weather?address=${x}`).then((response) => {
+    fetch(`/weather?address=${x}`).then((response) => {
     response.json().then((data) => {
         if(data.error){
             error1.textContent = `error: ${data.error}`
